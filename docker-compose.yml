@@ -1,0 +1,10 @@
+services:
+  intelligence-rag-agent:
+    build: .
+    ports:
+      - "8010:8010"
+    environment:
+      - LOG_LEVEL=info
+    volumes:
+      - ./data:/app/data:ro
+      - ./logs:/app/logs
