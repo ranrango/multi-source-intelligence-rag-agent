@@ -6,9 +6,13 @@ from .retriever import search
 from .tools import assess_risk, build_timeline, extract_entities, generate_report, write_trace
 
 
-def run_analysis(question: str, top_k: int = 6, data_dir: Path | str | None = None) -> dict[str, object]:
+def run_analysis(
+    question: str, top_k: int = 6, data_dir: Path | str | None = None
+) -> dict[str, object]:
     evidence = search(question, top_k=top_k, data_dir=data_dir)
-    write_trace("rag_search", {"question": question, "evidence_ids": [item.id for item in evidence]})
+    write_trace(
+        "rag_search", {"question": question, "evidence_ids": [item.id for item in evidence]}
+    )
 
     entities = extract_entities(evidence)
     write_trace("extract_entities", entities)

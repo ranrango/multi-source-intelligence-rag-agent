@@ -1,5 +1,6 @@
 # 多源情报 RAG 分析 Agent
 
+[![CI](https://github.com/ranrango/multi-source-intelligence-rag-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/ranrango/multi-source-intelligence-rag-agent/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
