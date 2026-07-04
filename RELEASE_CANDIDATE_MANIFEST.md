@@ -11,6 +11,8 @@ Generated: 2026-07-04
 - `docker-compose.yml`
 - `.env.example`
 - `.gitignore`
+- `assets/architecture.svg`
+- `assets/smoke-output.svg`
 - `src/app/*.py`
 - `scripts/*.py`
 - `examples/*`
@@ -19,6 +21,7 @@ Generated: 2026-07-04
 - `docs/*.md`
 - `CHANGELOG.md`
 - `CONTRIBUTING.md`
+- `RELEASE_NOTES.md`
 - `LICENSE`
 
 ## Intentionally Excluded
@@ -38,3 +41,4 @@ Generated: 2026-07-04
 - 增加 `scripts/smoke_test.py` 一键自检。
 - 增加 examples、评估方案和路线图文档。
 - README 增加预期输出和项目展示说明。
+- 增加架构图、smoke 输出图和 v0.1.0 release notes。

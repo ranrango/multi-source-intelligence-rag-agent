@@ -8,6 +8,12 @@
 
 这个项目的目标不是做一个普通聊天机器人，而是展示 Agent 工程中的完整闭环：**检索证据、调用工具、维护状态、记录 trace、输出可审计报告**。
 
+## 视觉概览
+
+![架构图](assets/architecture.svg)
+
+![Smoke Test 输出](assets/smoke-output.svg)
+
 ## 项目亮点
 
 | 能力 | 设计 |

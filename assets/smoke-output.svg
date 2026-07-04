@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="366" viewBox="0 0 1200 366" role="img" aria-label="多源情报 RAG 分析 Agent smoke test output">
+<rect width="1200" height="100%" rx="24" fill="#263238"/>
+<circle cx="42" cy="42" r="9" fill="#ff6b6b"/><circle cx="70" cy="42" r="9" fill="#f4a261"/><circle cx="98" cy="42" r="9" fill="#2a9d8f"/>
+<text x="128" y="49" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#d7ece8">多源情报 RAG 分析 Agent · smoke test</text>
+<text x="44" y="92" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#9be7dc">$ python3 scripts/smoke_test.py</text>
+<text x="44" y="124" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">{</text>
+<text x="44" y="156" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">  &quot;service&quot;: &quot;multi-source-intelligence-rag-agent&quot;,</text>
+<text x="44" y="188" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">  &quot;status&quot;: &quot;ok&quot;,</text>
+<text x="44" y="220" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">  &quot;evidence_count&quot;: 6,</text>
+<text x="44" y="252" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">  &quot;risk_level&quot;: &quot;高&quot;,</text>
+<text x="44" y="284" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">  &quot;report_contains_citations&quot;: true</text>
+<text x="44" y="316" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f7fbfa">}</text>
+</svg>
