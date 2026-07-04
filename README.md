@@ -50,6 +50,26 @@ curl -X POST http://127.0.0.1:8010/ask \
   -d '{"question":"北岭港夜间低空目标是否代表安全风险？", "top_k": 6}'
 ```
 
+## 一键自检
+
+```bash
+python3 scripts/smoke_test.py
+```
+
+预期输出会包含：
+
+```json
+{
+  "service": "multi-source-intelligence-rag-agent",
+  "status": "ok",
+  "evidence_count": 6,
+  "risk_level": "高",
+  "report_contains_citations": true
+}
+```
+
+更多请求样例见 [`examples/ask_request.json`](examples/ask_request.json)，报告检查点见 [`examples/expected_report.md`](examples/expected_report.md)。
+
 ## 项目结构
 
 ```text
@@ -61,7 +81,9 @@ curl -X POST http://127.0.0.1:8010/ask \
 │   ├── retriever.py     # 关键词/BM25 风格检索
 │   └── tools.py         # 实体、时间线、风险、报告工具
 ├── data/                # 多源模拟情报资料
-├── docs/                # 架构、API、部署、复现、面试稿
+├── examples/            # 请求样例和预期报告
+├── scripts/             # smoke test 等工程脚本
+├── docs/                # 架构、API、部署、评估、路线图、面试稿
 ├── tests/               # 核心流程测试
 ├── Dockerfile
 ├── docker-compose.yml
@@ -93,6 +115,11 @@ flowchart TD
 - 当前默认使用标准库实现轻量检索，便于离线演示；生产版建议替换为 Embedding + FAISS/Chroma + Reranker。
 - 当前风险评分是规则模型；真实落地应加入人工复核、冲突证据检测和阈值配置。
 - 样例数据为模拟数据，不代表真实安全事件。
+
+## 评估与路线图
+
+- [`docs/evaluation.md`](docs/evaluation.md)：定义证据召回、引用准确率、风险一致性、不确定性和 trace 完整性指标。
+- [`docs/roadmap.md`](docs/roadmap.md)：给出从当前离线 demo 到向量库、LangGraph、权限审计和生产交付的升级路径。
 
 ## 可扩展方向
 
