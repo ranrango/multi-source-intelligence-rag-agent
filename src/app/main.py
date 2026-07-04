@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Dict
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
@@ -14,16 +16,16 @@ class AskRequest(BaseModel):
 
 
 @app.get("/health")
-def health() -> dict[str, str]:
+def health() -> Dict[str, str]:
     return {"status": "ok", "service": "multi-source-intelligence-rag-agent"}
 
 
 @app.post("/ask")
-def ask(request: AskRequest) -> dict[str, object]:
+def ask(request: AskRequest) -> Dict[str, object]:
     return run_analysis(request.question, top_k=request.top_k)
 
 
 @app.post("/report")
-def report(request: AskRequest) -> dict[str, str]:
+def report(request: AskRequest) -> Dict[str, str]:
     result = run_analysis(request.question, top_k=request.top_k)
     return {"report": str(result["report"])}
