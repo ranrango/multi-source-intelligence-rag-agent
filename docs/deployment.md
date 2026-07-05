@@ -17,13 +17,19 @@ docker compose up --build
 
 ## 交付验收命令
 
+本地常规验收：
+
 ```bash
-make test
-make smoke
-make docker-build
+make check
 ```
 
-CI 会执行同样的核心检查，确保 API、离线 smoke 和 Docker 镜像构建都能通过。
+交付前完整验收：
+
+```bash
+make release-check
+```
+
+`release-check` 会额外执行 Docker 镜像构建；CI 会执行同样的交付验收命令，确保 API、离线 smoke、代码格式和 Docker 镜像构建都能通过。
 
 ## 交付给业务方
 
