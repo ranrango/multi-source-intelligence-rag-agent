@@ -89,6 +89,12 @@ make release-check
 
 `release-check` 会额外构建 Docker 镜像，需要本机 Docker daemon 已启动；GitHub Actions 会自动执行这条交付验收命令。
 
+只验证容器运行和 `/health`：
+
+```bash
+make container-check
+```
+
 更多请求样例见 [`examples/ask_request.json`](examples/ask_request.json)，报告检查点见 [`examples/expected_report.md`](examples/expected_report.md)。
 
 ## 项目结构
