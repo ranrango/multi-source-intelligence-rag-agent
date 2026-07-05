@@ -17,3 +17,4 @@ jobs:
       - run: make smoke
       - run: make lint
       - run: make format
+      - run: make docker-build

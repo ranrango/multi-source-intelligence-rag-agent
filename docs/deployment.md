@@ -15,6 +15,16 @@ uvicorn src.app.main:app --host 0.0.0.0 --port 8010
 docker compose up --build
 ```
 
+## 交付验收命令
+
+```bash
+make test
+make smoke
+make docker-build
+```
+
+CI 会执行同样的核心检查，确保 API、离线 smoke 和 Docker 镜像构建都能通过。
+
 ## 交付给业务方
 
 建议交付内容：
